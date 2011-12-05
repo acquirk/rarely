@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def index
+    @users = User.paginate(:page => params[:page])
+    @title = "All users"
+  end
   
   def show
     @user = User.find(params[:id])
@@ -14,8 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Hullo there!"
-      redirect_to @user
+      redirect_to @user, :flash => { :success => "Hullo there!" }
     else
       @title = "Sign up"
       render 'new'
