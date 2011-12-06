@@ -22,7 +22,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      # Sign in the user
       sign_in @user
+      # Deliver the signup_email
+      Notifier.signup_email(@user).deliver
       redirect_to @user, :flash => { :success => "Hullo there!" }
     else
       @title = "Sign up"
