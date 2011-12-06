@@ -15,7 +15,8 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    redirect_back_or root_path
+    flash[:success] = "Eradicated by the Eradicator (you)."
+    redirect_to current_user
   end
 
   private

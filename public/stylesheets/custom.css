@@ -127,15 +127,15 @@ table.profile {
 }
 
 td.main {
-  width: 70%;
+  width: 100%;
   padding: 1em;
 }
 
-td.sidebar {
-  width: 30%;
+.user-footer {
+  width: 96%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
+  background: #00ee55;
 }
 
 .profile img.gravatar {
@@ -251,6 +251,7 @@ form.new_micropost {
 }
 
 form.new_micropost textarea {
-  height: 4em;
+  height: 6em;
+  width: 98%;
   margin-bottom: 0;
 }

@@ -6,12 +6,13 @@
         <%= render 'shared/micropost_form' %>
         <%= render 'shared/feed' %>
       </td>
-      <td class="sidebar round">
-        <%= render 'shared/user_info' %>
-        <%= render 'shared/stats' %>
-      </td>
     </tr>
   </table>
+  <div class="user-footer round">
+    <%= render 'shared/user_info' %>
+    <%= render 'shared/stats' %>
+  </div>
+
 <% else %>
   <h1>Rarely</h1>
 
