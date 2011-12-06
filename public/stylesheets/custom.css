@@ -30,6 +30,10 @@ section h1 {
 h1.title {
   font-size: 1.4em;
 }
+
+.right {
+  float:right;
+}
 /* Links */
 
 a {

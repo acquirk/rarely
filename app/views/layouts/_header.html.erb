@@ -3,15 +3,14 @@
     <ul>
       <li><h1 class="title"><%= link_to "Rarely", root_path %></h1></li>
       <% if signed_in? %>
-      <li><%= link_to "Users", users_path %></li>
-      <li><%= link_to "Profile", current_user %></li>
-      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-      <% end %>
-      <li><%= link_to "Help", help_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <li class="right"><%= link_to "Sign out", signout_path, :method => :delete %></li>
       <% else %>
-      <li><%= link_to "Sign in", signin_path %></li>
+      <li class="right"><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+      <% if signed_in? %>
+      <li class="right"><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li class="right"><%= link_to "Everyone", users_path %></li>
+      <li class="right"><%= link_to "You", current_user %></li>
       <% end %>
     </ul>
   </nav>
