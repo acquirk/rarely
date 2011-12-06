@@ -3,7 +3,8 @@
 }
 
 body {
-  background: #000013;
+  background: #003013;
+  font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
 }
 
 header {
@@ -26,6 +27,9 @@ section h1 {
   font-size: 200%;
 }
 
+h1.title {
+  font-size: 1.4em;
+}
 /* Links */
 
 a {
@@ -45,10 +49,9 @@ a:visited {
 /* Navigation */
 
 nav {
-  float: right;
   background: white;
-  padding: 0 0.7em;
-  white-space: nowrap;
+  padding: 0.7em 0.7em 0.3em 0.7em;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 nav ul {
