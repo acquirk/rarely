@@ -6,6 +6,9 @@ body {
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   background:#ffc11a url('../images/bg1.png') repeat-x left top;
 }
+p{
+  font: #000 14px;
+}
 h3 {
   line-height: 28px;
 }
