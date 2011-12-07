@@ -1,11 +1,13 @@
 .container {
   width: 710px;
-  height: auto;
 }
 
 body {
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
-  background: #fc9700;
+  background:#ffc11a url('../images/bg1.png') repeat-x left top;
+}
+  /*
+  background-position: ;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjOTcwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2VkYzMyYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
   background: -moz-linear-gradient(top,  #fc9700 0%, #edc32a 28%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fc9700), color-stop(28%,#edc32a));
@@ -13,8 +15,8 @@ body {
   background: -o-linear-gradient(top,  #fc9700 0%,#edc32a 28%);
   background: -ms-linear-gradient(top,  #fc9700 0%,#edc32a 28%);
   background: linear-gradient(top,  #fc9700 0%,#edc32a 28%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9700', endColorstr='#edc32a',GradientType=0 );
-}
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9700', endColorstr='#edc32a',GradientType=0 ); */
+
 
 header {
   padding-top: 20px;
@@ -89,10 +91,11 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: #333;
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #333;
 }
 
 nav ul li a:hover {
@@ -130,6 +133,11 @@ footer {
   width: 710px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+
 }
 
 footer nav {
@@ -152,7 +160,7 @@ td.main {
   width: 96%;
   padding: 1em;
   vertical-align: top;
-  background: #00ee55;
+  background: #ffc11a;
 }
 
 .profile img.gravatar {
@@ -217,31 +225,21 @@ ul.users li {
 
 /*  Micropost styling */
 
-h1.micropost {
+h1.post {
   margin-bottom: 0.3em;
 }
 
-table.microposts {
+#posts {
   margin-top: 1em;
 }
 
-table.microposts tr {
-  height: 70px;
-}
-
-table.microposts tr td.gravatar {
+#posts .gravatar {
   border-top: 1px solid #ccc;
   vertical-align: top;
   width: 50px;
 }
 
-table.microposts tr td.micropost {
-  border-top: 1px solid #ccc;
-  vertical-align: top;
-  padding-top: 10px;
-}
-
-table.microposts tr td.micropost span.timestamp {
+.post span.timestamp {
   display: block;
   font-size: 85%;
   color: #666;
