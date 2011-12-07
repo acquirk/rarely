@@ -5,6 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost  = current_user.microposts.build(params[:micropost])
     if @micropost.save
+      Notifier.post_email(@user.followers).deliver
       flash[:success] = "Well said!"
       redirect_to root_path
     else

@@ -6,4 +6,10 @@ class Notifier < ActionMailer::Base
     mail( :to => user.email, 
           :subject => "Thanks for signing up" )
   end
+
+  def post_email(user)
+    mail( :to => user.followers.email, 
+          :subject => "Posted",
+          :content => :micropost.content )
+  end
 end
