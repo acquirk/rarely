@@ -14,10 +14,9 @@
   </div>
 
 <% else %>
-  <h1>Rarely</h1>
 
   <p>
-    This is the home page for the Rarely sample application.
+    <h1 class="title"><%= apptitle %></h1> is a way to share significant events of your life with people who actually want to read about them. Instead of tweeting or blogging, <%= apptitle %> prompts you to only write once per month, and only about things that matter to <strong>you</strong>.
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
