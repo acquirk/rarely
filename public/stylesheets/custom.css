@@ -5,10 +5,9 @@
 body {
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   background:#ffc11a url('../images/bg1.png') repeat-x left top;
+  color: #999;
 }
-p{
-  font: #000 14px;
-}
+
 h3 {
   line-height: 28px;
 }
@@ -27,9 +26,9 @@ header img {
 
 section {
   margin-top: 1em;
-  font-size: 120%;
   padding: 20px;
   background: #fff;
+  font-size: 130%;
 }
 section h1 {
   font-size: 200%;

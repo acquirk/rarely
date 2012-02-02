@@ -1,13 +1,11 @@
 <% if signed_in? %>
-  <table class="front" summary="For signed-in users">
-    <tr>
-      <td class="main">
+  <div class="front" summary="For signed-in users">
+      <div class="main">
         <h1 class="micropost">What happened this month?</h1>
         <%= render 'shared/micropost_form' %>
         <%= render 'shared/feed' %>
-      </td>
-    </tr>
-  </table>
+      </div>
+  </div>
   <div class="user-footer round">
     <%= render 'shared/user_info' %>
     <%= render 'shared/stats' %>
@@ -15,9 +13,8 @@
 
 <% else %>
 
-  <p>
-    <h1 class="title"><%= apptitle %></h1> is a way to share significant events of your life with people who actually want to read about them. Instead of tweeting or blogging, <%= apptitle %> prompts you to only write once per month, and only about things that matter to <strong>you</strong>.
+  <p>Share significant events of your life with people who actually want to read about them. Instead of tweeting or blogging incessantly into the vaccuum, you only write once per month, and only about things that matter to <strong>you</strong>.
   </p>
 
-  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+  <%= link_to "Get Started", signup_path, :class => "signup_button round" %>
 <% end %>
